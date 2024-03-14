@@ -1,5 +1,6 @@
-fn _strconst() {
+fn strconst() {
     let crab: char = '🦀';
+    // let crab = 0x1f980; // (actual crab)
     // let crab = 0x7e_u8 as char;
     // let crab = 0xffff_ffff_u32 as char;
     // let crab = char::from_u32(0xffff_ffff).unwrap();
@@ -18,7 +19,7 @@ fn _strconst() {
     println!("{}", crab_chars[0]);
 }
 
-fn _strstuff() {
+fn strstuff() {
     let crab_char =  '🦀';
     let mut crab = String::new();
     for _ in 0..5 {
@@ -44,6 +45,9 @@ fn main() {
     let x = 7u8;
     let y = x;
     println!("{} {}", x, y);
+
+    strconst();
+    strstuff();
 
     let x: String = "hello".to_string();
     let mut y = x.clone();
